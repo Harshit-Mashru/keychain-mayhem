@@ -2,11 +2,11 @@
 My first CTF challenge for picoCTF
 
 ## Keywords
-Web Exploitation
-SQL Injection
-PGP
-Base64
-Hidden Fields
+- Web Exploitation
+- SQL Injection
+- PGP
+- Base64
+- Hidden Fields
 
 ## Set up steps
 
