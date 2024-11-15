@@ -7,6 +7,7 @@ My first CTF challenge for picoCTF
 - PGP
 - Base64
 - Hidden Fields
+- OSINT
 
 ## Set up steps
 
@@ -26,3 +27,10 @@ docker run -it keychain-mayhem
 ```
 http://<Docker ip>:5000
 ```
+
+
+## Solution Approach
+
+- Navigate to the login page
+- Get in to find information about the developer and their interests
+- Send encrypted commands
