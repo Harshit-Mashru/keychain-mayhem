@@ -25,8 +25,13 @@ COPY ./app .
 RUN gpg --import /root/private.key && \
     gpg --import /root/public.key
 
+# Only root can see. Needed for picoctf, and how it knows the right flag.
+RUN mkdir /challenge && chmod 700 /challenge
+RUN echo "{\"flag\":\"$(cat /root/flag.txt)\"}" > /challenge/metadata.json
+
 # Expose port
 EXPOSE 5000
+# PUBLISH 5000 AS port
 
 # Initialize the database and run the application
 #RUN sqlite3 users.db "CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY AUTOINCREMENT, username TEXT NOT NULL, password TEXT NOT NULL); INSERT OR IGNORE INTO users (username, password) VALUES ('admin', 'p@@5w0rd!');" & python3 app.py&
